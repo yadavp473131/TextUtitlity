@@ -1,0 +1,23 @@
+//command for mongo db
+mongod //for starting host process
+mongo or mongosh //for client side
+
+show dbs
+show collections
+db.txt
+use harry  //automatically creates db if not present
+db.txt.insert({})  //empty document is inserted
+db.txt.insert({"name":"Harry"})
+
+show dbs
+use harryKart 
+show collections
+db.items.find()
+
+//inserting data to mongo db
+use harryKart
+db.items.insertOne({name:"Samsung 30s",price :22000,rating: 4.5,qty:233,sold:98}) //for inserting one object
+db.items.insertMany([{name:"Samsung 30s",price :22000,rating: 4.5,qty:233,sold:98},
+{name:"Samsung 20s",price :21000,rating: 4.3,qty:273,sold:198},
+{name:"Moto 30s",price :22000,rating: 2.5,qty:333,sold:98},
+{name:"Moto 10s",price :22000,rating: 4.4,qty:233,sold:98}])   //for inserting many objects
